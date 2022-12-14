@@ -7,20 +7,24 @@ function nextImage()
    if(itemActive < items.length - 1){
     items[itemActive].classList.remove('active')
     circles[itemActive].classList.remove('active')
+    slidesImage[itemActive].classList.remove('cover')
 
     itemActive++;
 
     items[itemActive].classList.add('active')
     circles[itemActive].classList.add('active')
+    slidesImage[itemActive].classList.add('cover')
    }
    else{
     items[itemActive].classList.remove('active')
     circles[itemActive].classList.remove('active')
+    slidesImage[itemActive].classList.remove('cover')
 
     itemActive = 0
 
     items[itemActive].classList.add('active')
     circles[itemActive].classList.add('active')
+    slidesImage[itemActive].classList.add('cover')
    }
 
 }
@@ -49,6 +53,14 @@ function prevImage()
 }
 
 // creato array di oggetti 
+
+const imgSlide =  [
+    "01.webp",
+    "02.webp",
+    "03.webp",
+    "04.webp",
+    "05.webp"
+]
 
 const videogiochi = [
     {
@@ -81,9 +93,17 @@ const videogiochi = [
 // mi definisco una costante vuota che poi vado a riempire nel forEach
 
 let itemContain = ""
+let slides = ""
 
 // creo una variabile che collego al DOM 
 
+
+imgSlide.forEach(imgSlide => {
+    slides += `<div class="slides">
+    <img src="./img/${imgSlide}" alt="imageslide">
+    </div>`
+    
+});
 
 videogiochi.forEach(videogiochi => {
     itemContain += `<div class="item">
@@ -96,13 +116,18 @@ videogiochi.forEach(videogiochi => {
     
 });
 
-const immaginiCarosello = document.querySelector('.img-carosello')
-immaginiCarosello.innerHTML += itemContain
+
+const immaginiCarosello = document.querySelector('.img-carosello');
+immaginiCarosello.innerHTML += itemContain;
+const immaginiSlide = document.querySelector('.slideimg');
+immaginiSlide.innerHTML += slides;
+
 
 //  creo una variabile che vada a collegarsi alla classe item da poter usare in JS
 
-const items = document.getElementsByClassName('item')
+const items = document.getElementsByClassName('item');
 const circles = document.getElementsByClassName('circle');
+const slidesImage = document.getElementsByClassName('slides');
 
 // mi faccio una variabile active pari a 0 che poi aumenterà di valore mano a mano che cambia soggetto
 
@@ -110,11 +135,14 @@ let itemActive = 0
 
 // alla variabile itemActive collegata ad items aggiungo la classe active
 
-items[itemActive].classList.add('active')
+items[itemActive].classList.add('active');
 circles[itemActive].classList.add('active');
+slidesImage[itemActive].classList.add('cover');
 
-const next = document.querySelector('.next')
-const prev = document.querySelector('.prev')
+const next = document.querySelector('.next');
+const prev = document.querySelector('.prev');
 
-next.addEventListener('click', nextImage)
-prev.addEventListener('click', prevImage)
+next.addEventListener('click', nextImage);
+prev.addEventListener('click', prevImage);
+
+

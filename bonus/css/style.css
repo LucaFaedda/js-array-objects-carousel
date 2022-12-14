@@ -15,6 +15,30 @@ body{
     align-items: center;
 }
 
+.slideimg{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    float: right;
+    background-color: #fff;
+}
+
+.slideimg img{
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.slides{
+    width: 100%;
+    height: calc(100% / 5);
+}
+
+.slides.cover{
+    background-color: black;
+    cursor: pointer;
+}
+
 .carosello{
     width: 50vw;
     height: 50vh;
