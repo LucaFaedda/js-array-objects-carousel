@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(3, 3, 27);
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carosello{
+    width: 50vw;
+    height: 50vh;
+    position: relative;
+}
+
+.img-carosello, .item, img{
+    height: 100%;
+    position: relative;
+}
+
+.item img{
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+.img-carosello img{
+    width: 100%;
+}
+
+.descrizione{
+    position: absolute;
+    color: rgb(247, 247, 247);
+    right: 5px;
+    bottom: 10px;
+}
+
+.arrow{
+    position: absolute;
+    width: 30px;
+    left: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+    background-color: rgb(185, 180, 172);
+    text-align: center;
+    border-radius: 50px;
+}
+
+.next{
+    top: 0px;
+}
+
+.prev{
+    bottom: -20px;
+}
