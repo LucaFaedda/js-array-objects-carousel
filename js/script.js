@@ -25,6 +25,28 @@ function nextImage()
 
 }
 
+function prevImage()
+{
+    if(itemActive > 0){
+    items[itemActive].classList.remove('active')
+    circles[itemActive].classList.remove('active')
+
+    itemActive--;
+
+    items[itemActive].classList.add('active')
+    circles[itemActive].classList.add('active')
+
+    }
+    else{
+    items[itemActive].classList.remove('active')
+    circles[itemActive].classList.remove('active')
+
+    itemActive = items.length - 1;
+
+    items[itemActive].classList.add('active')
+    circles[itemActive].classList.add('active')
+    }
+}
 
 // creato array di oggetti 
 
@@ -92,5 +114,7 @@ items[itemActive].classList.add('active')
 circles[itemActive].classList.add('active');
 
 const next = document.querySelector('.next')
+const prev = document.querySelector('.prev')
 
 next.addEventListener('click', nextImage)
+prev.addEventListener('click', prevImage)
