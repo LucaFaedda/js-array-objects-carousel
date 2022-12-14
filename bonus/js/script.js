@@ -146,3 +146,5 @@ next.addEventListener('click', nextImage);
 prev.addEventListener('click', prevImage);
 
 
+let myInterval = setInterval(nextImage,1000)
+

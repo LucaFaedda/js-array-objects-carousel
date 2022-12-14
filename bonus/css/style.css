@@ -122,3 +122,16 @@ body{
     background-color: rgba(174, 174, 174, 1); 
 }
 
+.botton{
+    padding: 10px 20px;
+    border:1px solid ;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.pulsanti{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
+ }
