@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(3, 3, 27);
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carosello{
+    width: 50vw;
+    height: 50vh;
+    position: relative;
+}
+
+.img-carosello, .item, img{
+    height: 100%;
+    position: relative;
+}
+
+.item{
+    display: none;
+}
+
+.item.active{
+    display: block;
+}
+
+.item img{
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+.img-carosello img{
+    width: 100%;
+}
+
+.descrizione{
+    position: absolute;
+    background-color: rgba(41, 40, 40, 0.637);
+    padding: 10px;
+    border-radius: 20px;
+    color: rgb(247, 247, 247);
+    right: 5px;
+    bottom: 10px;
+}
+
+.arrow{
+    position: absolute;
+    width: 30px;
+    left: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+    background-color: rgb(185, 180, 172);
+    text-align: center;
+    border-radius: 50px;
+}
+
+.arrow:hover{
+    filter: opacity(50%);
+}
+
+.next{
+    top: 0px;
+}
+
+.prev{
+    bottom: -20px;
+}
+.circles-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.circle{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(174, 174, 174, 0.509);
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+.circle.active, .circle:hover{
+    background-color: rgba(174, 174, 174, 1); 
+}
+
