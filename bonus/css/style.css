@@ -124,14 +124,36 @@ body{
 
 .botton{
     padding: 10px 20px;
-    border:1px solid ;
     border-radius: 10px;
     cursor: pointer;
+    margin: 10px;
+    font-size: 20px;
+    background: transparent;
+}
+
+#stop{
+    border: red 1px solid;
+    color: red;
+}
+
+#play{
+    border: green 1px solid;
+    color: green;
+}
+
+#reverse{
+    border: yellow 1px solid;
+    color: yellow;
+
+}
+.botton:hover{
+    background-color: rgb(170, 161, 161);
 }
 
 .pulsanti{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 3rem 0;
+    margin-top: 1rem;
+    flex-direction: column;
  }

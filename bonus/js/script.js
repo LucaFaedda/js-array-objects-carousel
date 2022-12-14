@@ -34,21 +34,25 @@ function prevImage()
     if(itemActive > 0){
     items[itemActive].classList.remove('active')
     circles[itemActive].classList.remove('active')
+    slidesImage[itemActive].classList.remove('cover')
 
     itemActive--;
 
     items[itemActive].classList.add('active')
     circles[itemActive].classList.add('active')
+    slidesImage[itemActive].classList.add('cover')
 
     }
     else{
     items[itemActive].classList.remove('active')
     circles[itemActive].classList.remove('active')
+    slidesImage[itemActive].classList.remove('cover')
 
     itemActive = items.length - 1;
 
     items[itemActive].classList.add('active')
     circles[itemActive].classList.add('active')
+    slidesImage[itemActive].classList.add('cover')
     }
 }
 
@@ -146,5 +150,20 @@ next.addEventListener('click', nextImage);
 prev.addEventListener('click', prevImage);
 
 
-let myInterval = setInterval(nextImage,1000)
+let myInterval = setInterval(nextImage,3000)
 
+document.getElementById('play').addEventListener('click',function(){
+    clearInterval(myInterval)
+    myInterval = setInterval(nextImage,3000)
+    
+})
+
+document.getElementById('stop').addEventListener('click',function(){
+    clearInterval(myInterval)
+})
+
+document.getElementById('reverse').addEventListener('click',function(){
+    clearInterval(myInterval)
+    setInterval(prevImage,3000)
+
+})
