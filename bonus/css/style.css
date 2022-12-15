@@ -23,6 +23,14 @@ body{
     background-color: #fff;
 }
 
+.carosello{
+    width: 50vw;
+    height: 50vh;
+    position: relative;
+}
+
+/* sezione slide */
+
 .slideimg img{
     width: 100%;
     object-fit: cover;
@@ -37,13 +45,10 @@ body{
 .slides.cover{
     background-color: black;
     cursor: pointer;
+    border: 1px solid #fff;
 }
 
-.carosello{
-    width: 50vw;
-    height: 50vh;
-    position: relative;
-}
+/* sezione immagini principali */
 
 .img-carosello, .item, img{
     height: 100%;
@@ -53,6 +58,7 @@ body{
 .item{
     display: none;
 }
+
 
 .item.active{
     display: block;
@@ -78,6 +84,8 @@ body{
     bottom: 10px;
 }
 
+/* sezione frecce */
+
 .arrow{
     position: absolute;
     width: 30px;
@@ -101,6 +109,9 @@ body{
 .prev{
     bottom: -20px;
 }
+
+/* sezione cerchi */
+
 .circles-container{
     display: flex;
     justify-content: center;
@@ -121,6 +132,8 @@ body{
 .circle.active, .circle:hover{
     background-color: rgba(174, 174, 174, 1); 
 }
+
+/* sezione pulsanti */
 
 .botton{
     padding: 10px 20px;
