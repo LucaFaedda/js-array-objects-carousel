@@ -109,15 +109,17 @@ imgSlide.forEach(imgSlide => {
     
 });
 
-videogiochi.forEach(videogiochi => {
+videogiochi.forEach(elem => {
     itemContain += `<div class="item">
-    <img src="./img/${videogiochi.img}" alt="image">
+    <img src="./img/${elem.img}" alt="image">
     <div class="descrizione">
-    <h3> ${videogiochi.titolo}</h3>
-    <p>${videogiochi.descrizione}</p>
+    <h3> ${elem.titolo}</h3>
+    <p>${elem.descrizione}</p>
     </div>
     </div>`
     
+    // cambiato nome elemento per non confondersi con nome array
+
 });
 
 
@@ -142,6 +144,23 @@ let itemActive = 0
 items[itemActive].classList.add('active');
 circles[itemActive].classList.add('active');
 slidesImage[itemActive].classList.add('cover');
+
+for(let i =0 ; i < slidesImage.length; i++){
+    let cover = slidesImage[i]
+    console.log(cover)
+    cover.addEventListener('click', function(){
+    
+    items[itemActive].classList.remove('active')
+    circles[itemActive].classList.remove('active')
+    slidesImage[itemActive].classList.remove('cover')
+
+    itemActive = i;
+
+    items[itemActive].classList.add('active')
+    circles[itemActive].classList.add('active')
+    slidesImage[itemActive].classList.add('cover')
+    })
+}
 
 const next = document.querySelector('.next');
 const prev = document.querySelector('.prev');
