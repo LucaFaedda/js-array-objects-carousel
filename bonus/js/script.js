@@ -101,7 +101,6 @@ let slides = ""
 
 // creo una variabile che collego al DOM 
 
-
 imgSlide.forEach(imgSlide => {
     slides += `<div class="slides">
     <img src="./img/${imgSlide}" alt="imageslide">
@@ -119,15 +118,12 @@ videogiochi.forEach(elem => {
     </div>`
     
     // cambiato nome elemento per non confondersi con nome array
-
 });
-
 
 const immaginiCarosello = document.querySelector('.img-carosello');
 immaginiCarosello.innerHTML += itemContain;
 const immaginiSlide = document.querySelector('.slideimg');
 immaginiSlide.innerHTML += slides;
-
 
 //  creo una variabile che vada a collegarsi alla classe item da poter usare in JS
 
@@ -168,13 +164,11 @@ const prev = document.querySelector('.prev');
 next.addEventListener('click', nextImage);
 prev.addEventListener('click', prevImage);
 
-
 let myInterval = setInterval(nextImage,3000)
 
 document.getElementById('play').addEventListener('click',function(){
     clearInterval(myInterval)
-    myInterval = setInterval(nextImage,3000)
-    
+    myInterval = setInterval(nextImage,3000)   
 })
 
 document.getElementById('stop').addEventListener('click',function(){
@@ -184,5 +178,4 @@ document.getElementById('stop').addEventListener('click',function(){
 document.getElementById('reverse').addEventListener('click',function(){
     clearInterval(myInterval)
     setInterval(prevImage,3000)
-
 })
