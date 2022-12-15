@@ -40,11 +40,11 @@ body{
 .slides{
     width: 100%;
     height: calc(100% / 5);
+    cursor: pointer;
 }
 
 .slides.cover{
     background-color: black;
-    cursor: pointer;
     border: 1px solid #fff;
 }
 
